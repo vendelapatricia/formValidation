@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<!--
+			Med inspiration från:
+			http://getbootstrap.com/
+			https://www.w3schools.com/bootstrap/
+		-->
+		<title>JavaScript för webbutveckling (ISGB15) 5hp</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+
+	<body>
+
+		<div class="jumbotron text-center">
+		  <h1>Laboration 2</h1>
+		</div>
+
+		<div class="container-fluid">
+
+			<div id="errorMsg"></div>
+			<!-- https://www.w3schools.com/bootstrap/bootstrap_alerts.asp -->
+
+			<form action="Lab2.html" method="post" id="theForm" onsubmit="return validateForm();">
+
+				<div class="form-group">
+				 	<label class="control-label" for="cbofabrikat">Välj fabrikat</label>
+					<select title="Fabrikat" id="cbofabrikat" class="form-control">
+						<option value="saknas" selected="selected">Välj fabrikat</option>
+						<option value="Volvo">Volvo</option>
+						<option value="Saab">Saab</option>
+						<option value="Audi">Audi</option>
+						<option value="Fiat">Fiat</option>
+						<option value="Skoda">Skoda</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="txtmodell">Ange modell</label>
+					<input type="text" placeholder="Modell" title="Modell" id="txtmodell" class="form-control" />
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="txtmatarstallning">Ange mätarställning (numeriskt värde)</label>
+					<input type="text" placeholder="Mätarställning" title="Mätarställning" id="txtmatarstallning"class="form-control" />
+				</div>
+
+				<div class="form-group">
+					<input type="checkbox" id="cbokommentar" />
+					<label class="control-label" for="cbokommentar">Övriga kommentarer</label>
+
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="txtkommentar">Fritextfällt för övriga kommentarer (min 5 tecken)</label>
+					<textarea rows="10" cols="30" title="Fritextfällt för övriga kommentarer" id="txtkommentar" placeholder="Övriga kommentarer" class="form-control"></textarea>
+				</div>
+
+				<input type="submit" value="Skicka" class="btn btn-info" />
+				<input type="reset" value="Rensa" class="btn btn-info" onclick="resetForm();"/>
+				<a href="Lab2.html" class="btn btn-info" role="button">Ladda om sidan</a>
+
+			</form>
+
+		</div>
+
+		<script type="text/javascript" src="formValidation1.js"></script>
+		<!--
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		-->
+	</body>
+
+</html>
